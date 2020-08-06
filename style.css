@@ -13,7 +13,11 @@
   transition: box-shadow 0.2s;
   height: auto;
 }
-
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+    .mycontainer {
+        width: 80%;
+    }
+}
 .mybanner{
   color: white;
   font-weight: 500;
@@ -60,3 +64,4 @@ code{
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(0,0,0,0.1);
 }
+
