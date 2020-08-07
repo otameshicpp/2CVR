@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../style.css">
+    <title>2CVR-Unityのインストール</title>
+    <link rel="icon" href="../favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="bancontainer">
+        <a href="../index.html" style="color: white;">2CVR</a>
+        <h1 class="mybanner" style="width: auto; font-size: 4vw;">Unityのインストール</h1>
+    </div>
+    <main>
+        <div class="mycontainer">
+            <div>
+                <p><strong>Cardboard 対応のUnity VR プロジェクトの環境構築</strong></p>
+                <ol>
+                    <li>
+                        <p><a
+                                href="https://github.com/googlevr/gvr-unity-sdk/releases/download/v1.200.1/GoogleVRForUnity_1.200.1.unitypackage">Cardboard対応にするのに必要なファイル</a>
+                            をダウンロードする</p>
+                    </li>
+                    <li>
+                        <p>インストールしたUnityを使って「3D」のプロジェクトを作る</p>
+                    </li>
+                    <li>
+                        <p>上のメニューから Assets &gt; Import Package &gt; Custom Package
+                            を選び、先ほどダウンロードしたファイルを選択し、Importする(途中で新しい画面が出てくると思いますが、特に何も変えずに右下のImportを押してください)</p>
+                    </li>
+                    <li>
+                        <p>下の窓から「GvrEditorEmulator」(立方体のマーク) を選んでHierarchyの窓に入れてください (パソコン上でスマホでの操作を再現できるようになります)</p>
+                    </li>
+                    <li>
+                        <p>上にある▶︎マークを押せば、スマホでの動作がシミュレートされます(左右分割になったりはしません) option(Alt)キーを押しながらマウスを動かすと視点の移動ができます</p>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+        <div class="mycontainer">
+            <div>
+                <p><strong>スマホ上で実行するには(iPhone)</strong></p>
+                <ol>
+                    <li><code>File &gt; Build Settings</code> を選択します
+                        iPhone の場合 : Xcodeが必要です(Apple IDでログインしてください)</li>
+                    <li>左の <code>iOS</code> を選択し、右下の <code>Switch Platform</code> を選択します
+                        左下の「Player Settings」をクリックします</li>
+                    <li><code>Player Settings</code> の下の方にある <code>XR Settings</code>
+                        を開き、<br><code>Virtual Reality Supported</code>
+                        のチェックボックスにチェックを入れる</li>
+                    <li>リストの右下にある＋ボタンを押し、<code>Cardboard</code> を選びます</li>
+                    <li><code>Build Settings</code> の右下の <code>Build</code> を押します</li>
+                    <li>名前を適当に入れたら、ビルドが始まります</li>
+                    <li>ビルドが完了したらそのフォルダを開き、 <code>〇〇.xcworkspace</code> を開いてください(白い設計図のマーク)</li>
+                    <li>左のバーの一番上(多分Unity-iPhone)をクリックし、上の <code>Signing &amp; Capabilities</code>
+                        を開いて適当なteamを選んでください(なんか警告が出たら適当にOKして)
+                    </li>
+                    <li>USBケーブルなどでiPhoneとmacをつないで右上の▶︎マークを押し、ビルドします。
+                        エラーが出たり、サインインに関してよく分からなかったらこちらも読んでみてください
+                        <a
+                            href="https://qiita.com/natsumo/items/3f1dd0e7f5471bd4b7d9">【Xcode】AppleDeveloperProgramに登録不要！！実機ビルドする方法</a>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
